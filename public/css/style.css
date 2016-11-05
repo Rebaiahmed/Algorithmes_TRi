@@ -1,0 +1,110 @@
+.back{
+      background-color: #00ff00;
+}
+.neuf{
+background-color: #d32f2f ;
+ height: 90px;
+ color: #fafafa ;
+   margin :auto ;
+   font-weight: bold;
+}
+
+.huit{
+background-color: #e65100;
+ height: 80px;
+ color: #fafafa ;
+   margin :auto ;
+    font-weight: bold;
+}
+
+.sept{
+background-color: #fb8c00 ;
+ height: 70px;
+ color: #fafafa ;
+   margin :auto ;
+    font-weight: bold;
+}
+
+.six{
+background-color: #d32f2f ;
+ height: 60px;
+ color: #fafafa ;
+   margin :auto ;
+    font-weight: bold;
+}
+
+.cinq{
+background-color: #33691e ;
+ height: 50px;
+ color: #fafafa ;
+   margin :auto ;
+    font-weight: bold;
+
+}
+
+.quatre{
+background-color: #8bc34a ;
+ height: 40px;
+ color: #fafafa ;
+  margin :auto ;
+   font-weight: bold;
+}
+.trois{
+background-color: #00897b ;
+ height: 30px;
+ color: #fafafa ;
+  margin :auto ;
+   font-weight: bold;
+}
+
+.deux{
+background-color: #3949ab ;
+ height: 25px;
+ color: #fafafa ;
+ margin :auto ;
+  font-weight: bold;
+}
+.un{
+background-color: #039be5 ;
+ height: 18px;
+ color: #fafafa ;
+  margin :auto ;
+   font-weight: bold;
+}
+
+.next{
+
+}
+.prev{
+
+}
+.slide2elemnt1
+{
+  background-color: #e0e0e0 ;
+   height: 50px;
+   color: #fafafa ;
+     margin :auto ;
+      font-weight: bold;
+}
+.slide4
+{
+
+
+}
+.slide5
+{
+
+
+}
+.hover{
+  color:#efbe5c;
+  font-size:20pt
+}
+.slide5P{
+
+}
+.collapsible-body
+{
+  margin: 0px;
+  background-color: #ffffff;
+}

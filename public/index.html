@@ -1,0 +1,3320 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>les Algorithmes de Tri</title>
+      <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/style.css">
+	  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <link rel="stuelsheet" href="bower_components/animate.css/animate.css">
+    <link rel="stylesheet" type="text/css"
+       href="https://fonts.googleapis.com/css?family=Roboto">
+ <style>
+   body {
+     font-family: 'Roboto', serif;
+
+   }
+ </style>
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+      <script src="bower_components/animateCSS/dist/jquery.animatecss.min.js"> </script>
+      <script src="bower_components/jquery-rotate/jquery.rotate.js"> </script>
+
+   </head>
+   <body>
+
+
+ <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"></a>
+
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+
+	  <h4 class="center light-blue-text lighten-1 animated flip" id="titre">les Algorithmes de tri <img src="img/penguin.png" width="80px"> </h3>
+      <div class="row">
+        <div class="col s12 blue-text text-darken-2">
+
+
+          <ul class="tabs blue-text text-darken-2">
+            <li class="tab col s3 blue-text text-darken-2"><a href="#insertion" class="blue-text text-darken-2">Le tri par insertion.</a></li>
+            <li class="tab col s3"><a  href="#selection" class="blue-text text-darken-2">Le tri par sélection</a></li>
+            <li class="tab col s3"><a href="#rapide" class="blue-text text-darken-2">Le tri rapide.</a></li>
+
+                  <li class="tab col s3"><a href="#fusion" class="blue-text text-darken-2">Le tri a Bulles</a></li>
+          </ul>
+
+        </div><!---end of col s12---->
+
+
+        <div id="insertion" class="col s12">
+
+            <div class="container">
+      <h5 class="center">Le Tri par insertion </h5>
+
+
+
+<div class="row">
+    <div class="col s4 right">
+  <a class="btn-floating btn-large waves-effect waves-light light-blue lighten-1 next"  ><i class="material-icons">skip_next</i> </a>
+    </div>
+
+     <div class="col s4 right">
+     <a class="btn-floating btn-large waves-effect waves-light light-blue lighten-1 prev"><i class="material-icons">skip_previous</i> </a>
+     </div>
+
+
+</div><!----end of row----->
+
+
+
+
+
+   <div class="row">
+        <div class="col s8 m4">
+          <div class="card   grey lighten-5">
+            <div class="card-content grey-text  darken-4">
+              <span class="card-title">Tri par insertion</span>
+            <p style="font-size:20px;font-weight:bold">Debut </p>
+            <p class=" light-green lighten-4">Pour i de 2 n faire </p>
+            <p>j = i </p>
+            <p class="light-green lighten-5"> Tant que( Tab[j] < Tab[j-1] ET j>1) Faire </p>
+            <p>Permuter(Tab[j], Tab[j-1]) </p>
+            <p>j=j-1 </p>
+            <p class="light-green lighten-5">Fin Tant que </p>
+            <p class="light-green lighten-4">Fin Pour </p>
+            <p style="font-size:20px;font-weight:bold">Fin </p>
+            </div><!--end of div card content--->
+
+          </div><!----end of class card--------->
+        </div><!----end of class col----->
+
+
+
+
+
+
+<div class="col s8 md8">
+
+<div class="slider">
+            <ul class="slides">
+
+
+                <li>
+                <div class="row center" style="margin: 10px;">
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+  <h4><b>Principe </b></h4>
+  <p>C'est le tri du joueur de cartes. On fait comme si les éléments à trier étaient donnés un par un, le premier élément constituant, à lui tout seul, une liste triée de longueur 1.</p>
+     <p>On range ensuite le second élément pour constituer une liste triée de longueur 2, puis on range le troisième élément pour avoir une liste triée de longueur 3 et ainsi de suite...</p>
+
+  Le principe du tri par insertion est donc d'insérer à la nième itération le nième élément à la bonne place.</p>
+</div><!---end of card content------->
+
+
+
+                </li>
+
+
+<!-------------------------------------------------------->
+
+        <li>
+                <div class="row center" style="margin: 10px;">
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+  <p style="font-size:20px">i=2</p>
+  <p style="font-size:20px">j=i=2 </p>
+
+
+<p style="font-size:20px"> Tab[2]=3 < Tab[1]=5 </p>
+<h5>Faire la permutation </h5>
+
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+
+
+
+<!---------------------------------------------------------->
+
+        <li>
+                <div class="row center" style="margin: 10px;">
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+
+  <p>Appliquer l'animation de permutation </p>
+  <p style="font-size:20px">j = j-1 = 1 <p>
+  <h5>Sortir du boucle </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+ <!-------------------------------------------------------------------------->
+ <!---------------------------------------------------------->
+
+        <li>
+                <div class="row center" style="margin: 10px;">
+
+
+    <div class="col s12 m1">
+        <p class="z-depth-3 trois">3</p>
+
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+ <p style="font-size:20px">i=3 </p> // Apliquer animation sur i
+ <p style="font-size:20px">j= i = 3 </p> Appliquer animation sur j
+
+
+  <p style="font-size:20px"> Tab[3]=4 < Tab[2]=5 </p>
+<h5>Faire la permutation </h5>
+
+
+
+
+</div><!---end of card content------->
+                </li>
+
+
+
+
+
+
+
+
+                <!------------------------------------------------------->
+                 <!---------------------------------------------------------->
+
+        <li>
+                <div class="row center" style="margin: 10px;">
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+ <p style="font-size:20px">i=3 </p> // Apliquer animation sur i
+ <p style="font-size:20px">j= j-1 = 2 </p> Appliquer animation sur j
+
+
+  <p> Tab[2]=4 > Tab[1]=3 </p>
+<h5>Rien faire  </h5>
+
+
+
+
+</div><!---end of card content------->
+                </li>
+
+                <!------------------------------------->
+
+
+<!------------------------------>
+    <li>
+                <div class="row center" style="margin: 10px;">
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+          <p class="z-depth-3 quatre">4</p>
+
+    </div>
+    <div class="col s12 m1">
+        <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+ <p style="font-ize:20px">i=4</p> // Apliquer animation sur i
+ <p style="font-ize:20px">j= i = 4 </p> Appliquer animation sur j
+
+
+  <p style="font-ize:20px"> Tab[4]=7< Tab[3]=5 </p>
+<h5>Rien Faire </h3>
+
+
+
+
+</div><!---end of card content------->
+                </li>
+
+                <!------------------------------------->
+
+
+<!------------------------------>
+    <li>
+                <div class="row center" style="margin: 10px;">
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+        <p class="z-depth-3 quatre">4</p>
+
+    </div>
+    <div class="col s12 m1">
+        <p class="z-depth-3 cinq">5</p>
+
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+
+    </div>
+    <div class="col s12 m1">
+        <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+
+  <p style="font-ize:20px">i=5</p> // Apliquer animation sur i
+  <p style="font-ize:20px">j= i = 5 </p> Appliquer animation sur j
+
+
+   <p style="font-ize:20px"> Tab[5]=2< Tab[4]=7 </p>
+ <h5>Faire la permutation </h3>
+
+
+
+
+</div><!---end of card content------->
+                </li>
+
+
+
+
+<!----------------------------------------------------------------------------->
+
+<!------------------------------>
+    <li>
+                <div class="row center" style="margin: 10px;">
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+        <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+        <p class="z-depth-3 cinq">5</p>
+
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 un">1</p>
+    </div>
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+  <p style="font-ize:20px">i=5</p> // Apliquer animation sur i
+  <p style="font-ize:20px">j= j-1 = 4 </p> Appliquer animation sur j
+
+
+   <p style="font-ize:20px"> Tab[4]=2< Tab[3]=5 </p>
+ <h5>Faire la permutation </h3>
+
+
+
+
+</div><!---end of card content------->
+                </li>
+
+
+
+
+<!------------------------------>
+    <li>
+                <div class="row center" style="margin: 10px;">
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">2</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 ">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 un">1</p>
+    </div>
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+
+  <p style="font-ize:20px">i=5</p> // Apliquer animation sur i
+  <p style="font-ize:20px">j= j-1 = 3 </p> Appliquer animation sur j
+
+
+   <p style="font-ize:20px"> Tab[3]=2< Tab[2]=4 </p>
+ <h5>Faire la permutation </h3>
+
+
+
+</div><!---end of card content------->
+                </li>
+
+
+
+
+                <!------------------------------>
+                    <li>
+                                <div class="row center" style="margin: 10px;">
+
+
+                    <div class="col s12 m1">
+                      <p class="z-depth-3 trois">3</p>
+                    </div>
+                    <div class="col s12 m1">
+                      <p class="z-depth-3 cinq">2</p>
+                    </div>
+                    <div class="col s12 m1">
+                      <p class="z-depth-3 ">4</p>
+                    </div>
+                    <div class="col s12 m1">
+                      <p class="z-depth-3 quatre">5</p>
+                    </div>
+                    <div class="col s12 m1">
+
+  <p class="z-depth-3 sept">7</p>
+                    </div>
+                     <div class="col s12 m1">
+                       <p class="z-depth-3 six">6</p>
+                    </div>
+                     <div class="col s12 m1">
+
+                       <p class="z-depth-3 huit">8</p>
+
+                    </div>
+                     <div class="col s12 m1">
+                      <p class="z-depth-3 neuf">9</p>
+                    </div>
+
+                </div><!----end of row---->
+
+
+
+                <div class="card-content white-text text-darken-2 center">
+
+
+                  <p style="font-ize:20px">i=5</p> // Apliquer animation sur i
+                  <p style="font-ize:20px">j= j-1 = 2</p> Appliquer animation sur j
+
+
+                   <p style="font-ize:20px"> Tab[2]=2< Tab[1]=3 </p>
+                 <h5>Faire la permutation </h3>
+
+
+
+                </div><!---end of card content------->
+                                </li>
+
+
+
+
+
+
+
+    <!------------------------------------------------------->
+
+                    <!------------------------------>
+                        <li>
+                                    <div class="row center" style="margin: 10px;">
+
+
+                        <div class="col s12 m1">
+                            <p class="z-depth-3 cinq">2</p>
+
+                        </div>
+                        <div class="col s12 m1">
+                          <p class="z-depth-3 trois">3</p>
+                        </div>
+                        <div class="col s12 m1">
+                          <p class="z-depth-3 ">4</p>
+                        </div>
+                        <div class="col s12 m1">
+                          <p class="z-depth-3 quatre">5</p>
+                        </div>
+                        <div class="col s12 m1">
+                          <p class="z-depth-3 sept">7</p>
+                        </div>
+                         <div class="col s12 m1">
+                          <p class="z-depth-3 huit">8</p>
+                        </div>
+                         <div class="col s12 m1">
+                          <p class="z-depth-3 six">6</p>
+                        </div>
+                         <div class="col s12 m1">
+                          <p class="z-depth-3 neuf">9</p>
+                        </div>
+
+                    </div><!----end of row---->
+
+
+
+                    <div class="card-content white-text text-darken-2 center">
+
+
+                      <p style="font-ize:20px">i=5</p> // Apliquer animation sur i
+                      <p style="font-ize:20px">j= j-1 = 1</p> Appliquer animation sur j
+
+
+
+                     <h5>Sortir du boucle </h3>
+
+
+
+                    </div><!---end of card content------->
+                                    </li>
+
+
+
+
+
+
+                        <!------------------------------------------------>
+                        <!------------------------------>
+                            <li>
+                                        <div class="row center" style="margin: 10px;">
+
+
+                            <div class="col s12 m1">
+                                <p class="z-depth-3 cinq">2</p>
+
+                            </div>
+                            <div class="col s12 m1">
+                              <p class="z-depth-3 trois">3</p>
+                            </div>
+                            <div class="col s12 m1">
+                              <p class="z-depth-3 ">4</p>
+                            </div>
+                            <div class="col s12 m1">
+                              <p class="z-depth-3 quatre">5</p>
+                            </div>
+                            <div class="col s12 m1">
+                              <p class="z-depth-3 sept">7</p>
+                            </div>
+                             <div class="col s12 m1">
+                              <p class="z-depth-3 huit">8</p>
+                            </div>
+                             <div class="col s12 m1">
+                              <p class="z-depth-3 six">6</p>
+                            </div>
+                             <div class="col s12 m1">
+                              <p class="z-depth-3 neuf">9</p>
+                            </div>
+
+                        </div><!----end of row---->
+
+
+
+                        <div class="card-content white-text text-darken-2 center">
+
+
+                          <p style="font-ize:20px">i=5</p> // Apliquer animation sur i
+                          <p style="font-ize:20px">j= j-1 = 1</p> Appliquer animation sur j
+
+
+
+                         <h5>Sortir du boucle </h3>
+
+
+
+                        </div><!---end of card content------->
+                                        </li>
+
+                                        <!-------------------------------------------->
+
+
+                                        <!------------------------------>
+                                            <li>
+                                                        <div class="row center" style="margin: 10px;">
+
+
+                                            <div class="col s12 m1">
+                                                <p class="z-depth-3 cinq">2</p>
+
+                                            </div>
+                                            <div class="col s12 m1">
+                                              <p class="z-depth-3 trois">3</p>
+                                            </div>
+                                            <div class="col s12 m1">
+                                              <p class="z-depth-3 ">4</p>
+                                            </div>
+                                            <div class="col s12 m1">
+                                              <p class="z-depth-3 quatre">5</p>
+                                            </div>
+                                            <div class="col s12 m1">
+                                              <p class="z-depth-3 sept">7</p>
+                                            </div>
+                                             <div class="col s12 m1">
+                                              <p class="z-depth-3 huit">8</p>
+                                            </div>
+                                             <div class="col s12 m1">
+                                              <p class="z-depth-3 six">6</p>
+                                            </div>
+                                             <div class="col s12 m1">
+                                              <p class="z-depth-3 neuf">9</p>
+                                            </div>
+
+                                        </div><!----end of row---->
+
+
+
+                                        <div class="card-content white-text text-darken-2 center">
+
+
+                                          <p style="font-ize:20px">i=6</p> // Apliquer animation sur i
+                                          <p style="font-ize:20px">j= i = 6</p> Appliquer animation sur j
+
+
+
+
+
+                                           <p style="font-ize:20px"> Tab[6]=8< Tab[5]=7 </p>
+                                         <h5>Rien Faire </h3>
+
+
+
+                                        </div><!---end of card content------->
+                                                        </li>
+
+
+
+
+
+
+
+                                                                                                <!------------------------------>
+                                                                                                    <li>
+                                                                                                                <div class="row center" style="margin: 10px;">
+
+
+                                                                                                    <div class="col s12 m1">
+                                                                                                        <p class="z-depth-3 cinq">2</p>
+
+                                                                                                    </div>
+                                                                                                    <div class="col s12 m1">
+                                                                                                      <p class="z-depth-3 trois">3</p>
+                                                                                                    </div>
+                                                                                                    <div class="col s12 m1">
+                                                                                                      <p class="z-depth-3 ">4</p>
+                                                                                                    </div>
+                                                                                                    <div class="col s12 m1">
+                                                                                                      <p class="z-depth-3 quatre">5</p>
+                                                                                                    </div>
+                                                                                                    <div class="col s12 m1">
+                                                                                                      <p class="z-depth-3 sept">7</p>
+                                                                                                    </div>
+                                                                                                     <div class="col s12 m1">
+                                                                                                      <p class="z-depth-3 huit">8</p>
+                                                                                                    </div>
+                                                                                                     <div class="col s12 m1">
+                                                                                                      <p class="z-depth-3 six">6</p>
+                                                                                                    </div>
+                                                                                                     <div class="col s12 m1">
+                                                                                                      <p class="z-depth-3 neuf">9</p>
+                                                                                                    </div>
+
+                                                                                                </div><!----end of row---->
+
+
+
+                                                                                                <div class="card-content white-text text-darken-2 center">
+
+
+                                                                                                  <p style="font-ize:20px">i=7</p> // Apliquer animation sur i
+                                                                                                  <p style="font-ize:20px">j= i = 7</p> Appliquer animation sur j
+
+
+
+
+
+                                                                                                   <p style="font-ize:20px"> Tab[7]=6< Tab[6]=8 </p>
+                                                                                                 <h5>Faire la permutation </h3>
+
+
+
+                                                                                                </div><!---end of card content------->
+                                                                                                                </li>
+
+
+                                                                                                                <!------------------------------>
+                                                                                                                    <li>
+                                                                                                                                <div class="row center" style="margin: 10px;">
+
+
+                                                                                                                    <div class="col s12 m1">
+                                                                                                                        <p class="z-depth-3 cinq">2</p>
+
+                                                                                                                    </div>
+                                                                                                                    <div class="col s12 m1">
+                                                                                                                      <p class="z-depth-3 trois">3</p>
+                                                                                                                    </div>
+                                                                                                                    <div class="col s12 m1">
+                                                                                                                      <p class="z-depth-3 ">4</p>
+                                                                                                                    </div>
+                                                                                                                    <div class="col s12 m1">
+                                                                                                                      <p class="z-depth-3 quatre">5</p>
+                                                                                                                    </div>
+                                                                                                                    <div class="col s12 m1">
+                                                                                                                      <p class="z-depth-3 sept">7</p>
+                                                                                                                    </div>
+                                                                                                                     <div class="col s12 m1">
+                                                                                                                         <p class="z-depth-3 six">6</p>
+
+                                                                                                                    </div>
+                                                                                                                     <div class="col s12 m1">
+                                                                                                                      <p class="z-depth-3 huit">8</p>
+                                                                                                                    </div>
+                                                                                                                     <div class="col s12 m1">
+                                                                                                                      <p class="z-depth-3 neuf">9</p>
+                                                                                                                    </div>
+
+                                                                                                                </div><!----end of row---->
+
+
+
+                                                                                                                <div class="card-content white-text text-darken-2 center">
+
+
+                                                                                                                  <p style="font-ize:20px">i=7</p> // Apliquer animation sur i
+                                                                                                                  <p style="font-ize:20px">j= j-1 = 6</p> Appliquer animation sur j
+
+
+
+
+
+                                                                                                                   <p style="font-ize:20px"> Tab[6]=6< Tab[5]=7 </p>
+                                                                                                                 <h5>Faire la permutation </h3>
+
+
+
+                                                                                                                </div><!---end of card content------->
+                                                                                                                                </li>
+
+
+
+                                                                                                                                <!------------------------------>
+                                                                                                                                    <li>
+                                                                                                                                                <div class="row center" style="margin: 10px;">
+
+
+                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                        <p class="z-depth-3 cinq">2</p>
+
+                                                                                                                                    </div>
+                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                      <p class="z-depth-3 trois">3</p>
+                                                                                                                                    </div>
+                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                      <p class="z-depth-3 ">4</p>
+                                                                                                                                    </div>
+                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                      <p class="z-depth-3 quatre">5</p>
+                                                                                                                                    </div>
+                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                         <p class="z-depth-3 six">6</p>
+
+                                                                                                                                    </div>
+                                                                                                                                     <div class="col s12 m1">
+                                                                                                                                        <p class="z-depth-3 sept">7</p>
+
+                                                                                                                                    </div>
+                                                                                                                                     <div class="col s12 m1">
+                                                                                                                                      <p class="z-depth-3 huit">8</p>
+                                                                                                                                    </div>
+                                                                                                                                     <div class="col s12 m1">
+                                                                                                                                      <p class="z-depth-3 neuf">9</p>
+                                                                                                                                    </div>
+
+                                                                                                                                </div><!----end of row---->
+
+
+
+                                                                                                                                <div class="card-content white-text text-darken-2 center">
+
+
+                                                                                                                                  <p style="font-ize:20px">i=7</p> // Apliquer animation sur i
+                                                                                                                                  <p style="font-ize:20px">j= j-1 = 5</p> Appliquer animation sur j
+
+
+
+
+
+                                                                                                                                   <p style="font-ize:20px"> Tab[5]=6> Tab[4]=5 </p>
+                                                                                                                                 <h5>Rien Faire </h3>
+
+
+
+                                                                                                                                </div><!---end of card content------->
+                                                                                                                                                </li>
+
+
+
+                                                                                                                                                <!------------------------------>
+                                                                                                                                                    <li>
+                                                                                                                                                                <div class="row center" style="margin: 10px;">
+
+
+                                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                                        <p class="z-depth-3 cinq">2</p>
+
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                                      <p class="z-depth-3 trois">3</p>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                                      <p class="z-depth-3 ">4</p>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                                      <p class="z-depth-3 quatre">5</p>
+                                                                                                                                                    </div>
+                                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                                         <p class="z-depth-3 six">6</p>
+
+                                                                                                                                                    </div>
+                                                                                                                                                     <div class="col s12 m1">
+                                                                                                                                                        <p class="z-depth-3 sept">7</p>
+
+                                                                                                                                                    </div>
+                                                                                                                                                     <div class="col s12 m1">
+                                                                                                                                                      <p class="z-depth-3 huit">8</p>
+                                                                                                                                                    </div>
+                                                                                                                                                     <div class="col s12 m1">
+                                                                                                                                                      <p class="z-depth-3 neuf">9</p>
+                                                                                                                                                    </div>
+
+                                                                                                                                                </div><!----end of row---->
+
+
+
+                                                                                                                                                <div class="card-content white-text text-darken-2 center">
+
+
+                                                                                                                                                  <p style="font-ize:20px">i=7</p> // Apliquer animation sur i
+
+
+                                                                                                                                                 <h5>Rien Faire </h3>
+
+
+
+                                                                                                                                                </div><!---end of card content------->
+                                                                                                                                                                </li>
+
+
+
+
+                                                                                                                                                                <!------------------------------>
+                                                                                                                                                                    <li>
+                                                                                                                                                                                <div class="row center" style="margin: 10px;">
+
+
+                                                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                                                        <p class="z-depth-3 cinq">2</p>
+
+                                                                                                                                                                    </div>
+                                                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                                                      <p class="z-depth-3 trois">3</p>
+                                                                                                                                                                    </div>
+                                                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                                                      <p class="z-depth-3 ">4</p>
+                                                                                                                                                                    </div>
+                                                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                                                      <p class="z-depth-3 quatre">5</p>
+                                                                                                                                                                    </div>
+                                                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                                                         <p class="z-depth-3 six">6</p>
+
+                                                                                                                                                                    </div>
+                                                                                                                                                                     <div class="col s12 m1">
+                                                                                                                                                                        <p class="z-depth-3 sept">7</p>
+
+                                                                                                                                                                    </div>
+                                                                                                                                                                     <div class="col s12 m1">
+                                                                                                                                                                      <p class="z-depth-3 huit">8</p>
+                                                                                                                                                                    </div>
+                                                                                                                                                                     <div class="col s12 m1">
+                                                                                                                                                                      <p class="z-depth-3 neuf">9</p>
+                                                                                                                                                                    </div>
+
+                                                                                                                                                                </div><!----end of row---->
+
+
+
+                                                                                                                                                                <div class="card-content white-text text-darken-2 center">
+
+
+                                                                                                                                                                  <p style="font-ize:20px">i=9</p> // Apliquer animation sur i
+                                                                                                                                                                  <p style="font-ize:20px">j= i = 9</p> Appliquer animation sur j
+
+
+
+
+
+                                                                                                                                                                   <p style="font-ize:20px"> Tab[9]=9> Tab[8]=8 </p>
+                                                                                                                                                                 <h5>Rien Faire </h3>
+
+
+
+                                                                                                                                                                </div><!---end of card content------->
+                                                                                                                                                                                </li>
+
+
+                                                                                                                                                                                <!------------------------------>
+                                                                                                                                                                                    <li>
+                                                                                                                                                                                                <div class="row center" style="margin: 10px;">
+
+
+                                                                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                                                                        <p class="z-depth-3 cinq">2</p>
+
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                                                                      <p class="z-depth-3 trois">3</p>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                                                                      <p class="z-depth-3 ">4</p>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                                                                      <p class="z-depth-3 quatre">5</p>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                    <div class="col s12 m1">
+                                                                                                                                                                                         <p class="z-depth-3 six">6</p>
+
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                     <div class="col s12 m1">
+                                                                                                                                                                                        <p class="z-depth-3 sept">7</p>
+
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                     <div class="col s12 m1">
+                                                                                                                                                                                      <p class="z-depth-3 huit">8</p>
+                                                                                                                                                                                    </div>
+                                                                                                                                                                                     <div class="col s12 m1">
+                                                                                                                                                                                      <p class="z-depth-3 neuf">9</p>
+                                                                                                                                                                                    </div>
+
+                                                                                                                                                                                </div><!----end of row---->
+
+
+
+                                                                                                                                                                                <div class="card-content white-text text-darken-2 center">
+
+
+                                                                                                                                                                                  <p style="font-ize:20px">i=7</p> // Apliquer animation sur i
+                                                                                                                                                                                  <p style="font-ize:20px">j= j-1 = 5</p> Appliquer animation sur j
+
+
+
+
+
+                                                                                                                                                                                   <p style="font-ize:20px"> Tab[5]=6> Tab[4]=5 </p>
+                                                                                                                                                                                 <h5>Rien Faire </h3>
+
+
+
+                                                                                                                                                                                </div><!---end of card content------->
+                                                                                                                                                                                                </li>
+
+
+            </ul>
+
+</div><!---end of class slider---->
+</div><!----end of div----->
+
+
+
+
+
+
+
+
+
+      </div><!----end of calss row----->
+
+
+
+
+
+<!------------------------------------------------------------>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------------------------------------------------------------->
+
+
+
+
+
+
+
+</div><!--end of container---->
+
+        </div><!----end of div id insertion----->
+
+
+
+<!--------------------------------------------------------------------->
+        <div id="selection" class="col s12">
+
+
+
+            <div class="container">
+      <h5 class="center">Le Tri par sélection </h5>
+
+
+
+<div class="row">
+    <div class="col s4 right">
+  <a class="btn-floating btn-large waves-effect waves-light light-blue lighten-1 next"  ><i class="material-icons">skip_next</i> </a>
+    </div>
+
+     <div class="col s4 right">
+     <a class="btn-floating btn-large waves-effect waves-light light-blue lighten-1 prev"><i class="material-icons">skip_previous</i> </a>
+     </div>
+
+
+</div><!----end of row----->
+
+
+
+
+
+   <div class="row">
+        <div class="col s8 m4">
+          <div class="card   grey lighten-5">
+            <div class="card-content grey-text  darken-4">
+              <span class="card-title">Tri par selection</span>
+            <p style="font-size:20px;font-weight:bold">Debut </p>
+            <p class=" light-green lighten-1">pour i de 1 jusquà n-1faire </p>
+            <p>m = i </p>
+            <p class="cyan lighten-1"> Pour j de (i+1) a n faire </p>
+            <p class="cyan lighten-1">Si (Tab[j] < Tab[m]) Alors </p>
+            <p>m=j </p>
+            <p>tmp = Tab[j] </p>
+            <p>Tab[j] = Tab[m] </p>
+            <p>Tab[m] = tmp </p>
+            <p>m=i </p>
+            <p class="cyan lighten-1">Fin Si </p>
+            <p class=" light-green lighten-1">Fin Pour </p>
+             <p class=" light-green lighten-4">Fin Pour </p>
+            <p style="font-size:20px;font-weight:bold">Fin </p>
+            </div><!--end of div card content--->
+
+          </div><!----end of class card--------->
+        </div><!----end of class col----->
+
+
+
+
+
+
+<div class="col s8 md8">
+
+<div class="slider">
+            <ul class="slides">
+
+
+                <li>
+                <div class="row center" style="margin: 10px;">
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+  <p>L'idée est simple : rechercher le plus grand élément (ou le plus petit), le placer en fin de tableau (ou en début),
+     recommencer avec le second plus grand (ou le second plus petit), le placer en avant-dernière position (ou en seconde position)
+     et ainsi de suite jusqu'à avoir parcouru la totalité du tableau..</p>
+</div><!---end of card content------->
+
+
+
+                </li>
+
+
+<!-------------------------------------------------------->
+
+
+
+
+
+
+
+                <li>
+                <div class="row center" style="margin: 10px;">
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=1 </p>
+<p> m=i=1 </p>
+<p> j=2 </p>
+
+<p>  Tab[j]=Tab[2]= 3  < Tab[m]=Tab[1]=5</p>
+
+<h5>Faire la permutation </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+          <li>
+                <div class="row center" style="margin: 10px;">
+
+<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=1 </p>
+<p> m=i=1 </p>
+<p> j=3 </p>
+
+<p>  Tab[j]=Tab[3]= 4 > Tab[m]=Tab[1]=3</p>
+
+<h5>Rien à faire </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+
+<!------------------------------------------------>
+
+   <li>
+                <div class="row center" style="margin: 10px;">
+
+<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=1 </p>
+<p> m=i=1 </p>
+<p> j=4 </p>
+
+<p>  Tab[j]=Tab[4]= 7 > Tab[m]=Tab[1]=3</p>
+
+<h5>Rien à faire </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+
+
+
+                <!-------------------------------->
+
+  <li>
+                <div class="row center" style="margin: 10px;">
+
+<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=1 </p>
+<p> m=i=1 </p>
+<p> j=5 </p>
+
+<p>  Tab[j]=Tab[5]= 2 < Tab[m]=Tab[1]=3</p>
+
+<h5>Faire permutation </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+				 <li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=1 </p>
+<p> m=i=1 </p>
+<p> j=6 </p>
+
+<p>  Tab[j]=Tab[6]= 8 > Tab[m]=Tab[1]=2</p>
+
+<h5>Rien à faire </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+								 <li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=1 </p>
+<p> m=i=1 </p>
+<p> j=7 </p>
+
+<p>  Tab[j]=Tab[7]= 6 > Tab[m]=Tab[1]=2</p>
+
+<h5>Rien à faire </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+										 <li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=1 </p>
+<p> m=i=1 </p>
+<p> j=8 </p>
+
+<p>  Tab[j]=Tab[8]= 9 > Tab[m]=Tab[1]=2</p>
+
+<h5>Rien à faire </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+										 <li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=2 </p>
+<p> m=i=2 </p>
+<p> j=3 </p>
+
+<p>  Tab[j]=Tab[3]= 4 < Tab[m]=Tab[2]=5</p>
+
+<h5>Faire permutation </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+														 <li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=2 </p>
+<p> m=i=2 </p>
+<p> j=4 </p>
+
+<p>  Tab[j]=Tab[4]= 7 > Tab[m]=Tab[2]=4</p>
+
+<h5>Rien à faire </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+															 <li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=2 </p>
+<p> m=i=2 </p>
+<p> j=5 </p>
+
+<p>  Tab[j]=Tab[5]= 3 < Tab[m]=Tab[2]=4</p>
+
+<h5>faire permutation </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+															 <li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+   <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=2 </p>
+<p> m=i=2 </p>
+<p> j=6 </p>
+
+<p>  Tab[j]=Tab[6]= 8 > Tab[m]=Tab[2]=4</p>
+
+<h5>Rien à faire </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+																 <li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+   <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=2 </p>
+<p> m=i=2 </p>
+<p> j=7 </p>
+
+<p>  Tab[j]=Tab[7]= 6 > Tab[m]=Tab[2]=4</p>
+
+<h5>Rien à faire </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+				<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+   <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=2 </p>
+<p> m=i=2 </p>
+<p> j=8 </p>
+
+<p>  Tab[j]=Tab[8]= 9 > Tab[m]=Tab[2]=4</p>
+
+<h5>Rien à faire </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+						<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+   <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=3 </p>
+<p> m=i=3 </p>
+<p> j=4 </p>
+
+<p>  Tab[j]=Tab[4]= 7> Tab[m]=Tab[3]=5</p>
+
+<h5>Rien à faire </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+										<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+   <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=3 </p>
+<p> m=i=3 </p>
+<p> j=5 </p>
+
+<p>  Tab[j]=Tab[5]= 4< Tab[m]=Tab[3]=5</p>
+
+<h5>Faire permutation </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+													<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+   <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=3 </p>
+<p> m=i=3 </p>
+<p> j=6 </p>
+
+<p>  Tab[j]=Tab[6]= 8> Tab[m]=Tab[3]=4</p>
+
+<h5>Rien à faire  </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+															<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+   <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=3 </p>
+<p> m=i=3 </p>
+<p> j=7 </p>
+
+<p>  Tab[j]=Tab[7]= 6> Tab[m]=Tab[3]=4</p>
+
+<h5>Rien à faire  </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+																		<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+   <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=3 </p>
+<p> m=i=3 </p>
+<p> j=8 </p>
+
+<p>  Tab[j]=Tab[8]= 9> Tab[m]=Tab[3]=4</p>
+
+<h5>Rien à faire  </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+																		<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+   <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=4 </p>
+<p> m=i=4 </p>
+<p> j=5 </p>
+
+<p>  Tab[j]=Tab[5]= 5< Tab[m]=Tab[4]=7</p>
+
+<h5>Faire permutation  </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+																					<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=4 </p>
+<p> m=i=4 </p>
+<p> j=6 </p>
+
+<p>  Tab[j]=Tab[6]= 8> Tab[m]=Tab[4]=5</p>
+
+<h5>Rien à faire  </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+																									<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=4 </p>
+<p> m=i=4 </p>
+<p> j=7 </p>
+
+<p>  Tab[j]=Tab[7]= 6> Tab[m]=Tab[4]=5</p>
+
+<h5>Rien à faire  </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+																												<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=4 </p>
+<p> m=i=4 </p>
+<p> j=8 </p>
+
+<p>  Tab[j]=Tab[8]= 9> Tab[m]=Tab[4]=5</p>
+
+<h5>Rien à faire  </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+																														<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=5 </p>
+<p> m=i=5 </p>
+<p> j=6 </p>
+
+<p>  Tab[j]=Tab[6]=8> Tab[m]=Tab[5]=7</p>
+
+<h5>Rien à faire  </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+																															<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=5 </p>
+<p> m=i=5 </p>
+<p> j=7 </p>
+
+<p>  Tab[j]=Tab[7]=6< Tab[m]=Tab[5]=7</p>
+
+<h5>Faire permutation  </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+																																		<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=5 </p>
+<p> m=i=5 </p>
+<p> j=8 </p>
+
+<p>  Tab[j]=Tab[8]=9> Tab[m]=Tab[5]=6</p>
+
+<h5>Rien à faire  </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+																																					<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=6 </p>
+<p> m=i=6 </p>
+<p> j=7 </p>
+
+<p>  Tab[j]=Tab[7]=7< Tab[m]=Tab[6]=8</p>
+
+<h5>Faire permutation  </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+																																								<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+
+   <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=6 </p>
+<p> m=i=6 </p>
+<p> j=7 </p>
+
+<p>  Tab[j]=Tab[7]=7< Tab[m]=Tab[6]=8</p>
+
+<h5>Faire permutation  </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+																																										<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+
+   <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=6 </p>
+<p> m=i=6 </p>
+<p> j=8 </p>
+
+<p>  Tab[j]=Tab[8]=9> Tab[m]=Tab[6]=7</p>
+
+<h5>Rien à faire   </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+																																												<li>
+                <div class="row center" style="margin: 10px;">
+<div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+
+<div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+	<div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+
+   <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p> i=7 </p>
+<p> m=i=7 </p>
+<p> j=8 </p>
+
+<p>  Tab[j]=Tab[8]=8> Tab[m]=Tab[7]=7</p>
+
+<h5>Tableau trié   </h5>
+<h5>i=n-1=8-1=7  </h5>
+<h5>j=n=8 </h5>
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+            </ul>
+
+</div><!---end of class slider---->
+</div><!----end of div----->
+
+
+
+
+
+
+
+
+
+      </div><!----end of calss row----->
+
+
+
+
+
+<!------------------------------------------------------------>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------------------------------------------------------------->
+
+
+
+
+
+
+
+</div><!--end of container---->
+
+        </div><!----end of div section------------->
+
+
+
+
+<!------------------------------------------------------------------------------------------>
+
+
+ <div id="rapide" class="col s12">
+
+    <div class="container">
+      <h5 class="center">Le Tri Rapide</h5>
+
+
+
+<div class="row">
+    <div class="col s4 right">
+  <a class="btn-floating btn-large waves-effect waves-light light-blue lighten-1 next"  ><i class="material-icons">skip_next</i> </a>
+    </div>
+
+     <div class="col s4 right">
+     <a class="btn-floating btn-large waves-effect waves-light light-blue lighten-1 prev"><i class="material-icons">skip_previous</i> </a>
+     </div>
+
+
+</div><!----end of row----->
+
+
+
+
+
+   <div class="row">
+        <div class="col s8 m4">
+          <div class="card   grey lighten-5">
+            <div class="card-content grey-text  darken-4">
+              <span class="card-title">Algorithme QuickSort</span>
+            <p style="font-size:20px;font-weight:bold">Debut </p>
+
+
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                  <div class="collapsible-header"><i class="material-icons">filter_drama</i>Algorithme Partition</div>
+                  <div class="collapsible-body">
+                    <p>piv  ¬  Tab[D]</p>
+                     <p>i  ¬ G-1 </p>
+                     <p>j  ¬ D</p>
+                     <p style="font-size:10px;font-weight:bold">Repeter </p>
+                        <p>repeter  i ¬  i+1 jusquà Tab[i] >= piv </p>
+                        <p>repeter  j ¬  j-1 jusquà Tab[j] <= piv</p>
+                        <p>temp ¬  Tab[i] </p>
+                        <p>Tab[i] ¬  Tab[j] </p>
+                        <p>Tab[j] ¬  temp </p>
+                     <p style="font-size:10px;font-weight:bold">jusquà j <= i </p>
+                     <p>Tab[j] ¬  Tab[i] </p>
+                     <p>Tab[i] ¬  Tab[d] </p>
+                     <p>Tab[d] ¬  temp </p>
+                     <p>résultat ¬  i </p>
+<p>Fi </p>
+                  </div>
+                </li>
+
+              </ul>
+
+  <p style="font-size:20px;font-weight:bold">Si (m < n) Alors </p>
+  <p>indice_pivot = partition(T[n,m]) </p>
+  <p>QuickSort(T[m,indice_pivot-1]) </p>
+    <p>QuickSort(T[indice_pivot+1,n]) </p>
+
+            <p style="font-size:20px;font-weight:bold">Fin </p>
+            </div><!--end of div card content--->
+
+          </div><!----end of class card--------->
+        </div><!----end of class col----->
+
+
+
+
+
+
+<div class="col s8 md8">
+
+<div class="slider">
+            <ul class="slides">
+
+
+                <li>
+                <div class="row center" style="margin: 10px;">
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 un">1</p>
+    </div>
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+  <h4><b>Principe </b></h4>
+
+
+<div class="valign-wrapper">
+<p>En fait, l'idée, c'est de séparer le tableau en deux. <p>
+  <p>Pour cela, on choisit une valeur de notre tableau de base, qu'on appelle <span class="blue-text text-darken-2">pivot </span>. </p>
+  <p> <span class="blue-text text-darken-2">pivot </span>. est souvent la valeur de la première case du tableau.</p>
+  <p> On construit alors deux « sous-tableaux » :</p>
+   <p>*l'un contient toutes les valeurs du premier tableau qui sont inférieures ou égales au <span class="blue-text text-darken-2">pivot </span>.</p>
+     <p>*l'autre contient les valeurs supérieures au <span class="blue-text text-darken-2">pivot </span>.</p>
+</div><!--end of class valign---->
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+
+<!-------------------------------------------------------->
+
+
+<!---------------------------------------------------------------------------------------------------------->
+
+
+                <li>
+                <div class="row center" style="margin: 10px;">
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 un">1</p>
+    </div>
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+
+
+
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+
+<!-------------------------------------------------------->
+
+
+
+            </ul>
+
+</div><!---end of class slider---->
+</div><!----end of div----->
+
+
+
+
+
+
+
+
+
+      </div><!----end of calss row----->
+
+
+
+
+
+<!------------------------------------------------------------>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------------------------------------------------------------->
+
+
+
+
+
+
+
+</div><!--end of container---->
+
+
+        </div><!----end of div id rapide----->
+
+
+
+
+
+
+
+
+
+
+        <!-------------------------------------------------------->
+
+        <!------------------------------------------------------------------------------------------------------------>
+
+ <div id="fusion" class="col s12">
+
+  <div class="container">
+      <h5 class="center">Le Tri a Bulles</h5>
+
+
+
+<div class="row">
+    <div class="col s4 right">
+  <a class="btn-floating btn-large waves-effect waves-light light-blue lighten-1 next"  ><i class="material-icons">skip_next</i> </a>
+    </div>
+
+     <div class="col s4 right">
+     <a class="btn-floating btn-large waves-effect waves-light light-blue lighten-1 prev"><i class="material-icons">skip_previous</i> </a>
+     </div>
+
+
+</div><!----end of row----->
+
+
+
+
+
+   <div class="row">
+        <div class="col s8 m4">
+          <div class="card   grey lighten-5">
+            <div class="card-content grey-text  darken-4">
+              <span class="card-title">Tri a Bulles</span>
+            <p style="font-size:20px;font-weight:bold">Debut </p>
+
+            <p>Répeter</p>
+            <p> echange <--- Faux </p>
+            <p>Pour i de 1 a n-1 Faire </p>
+            <p>Si (T[i] >T[i+1]) </p>
+              <p>Si (T[i] >T[i+1]) Alors </p>
+                <p> x <--T[i] </p>
+                  <p> T[i] <--T[i+1] </p>
+                    <p> T[i+1] <--x </p>
+                        <p> echange <--Vrai </p>
+                          <p>Fin Si </p>
+                          <p>Fin Pour </p>
+                          <p> Jusqu'a (echnage = Faux) </p>
+
+            <p style="font-size:20px;font-weight:bold">Fin </p>
+            </div><!--end of div card content--->
+
+          </div><!----end of class card--------->
+        </div><!----end of class col----->
+
+
+
+
+
+
+<div class="col s8 md8">
+
+<div class="slider">
+            <ul class="slides">
+
+
+                <li>
+                <div class="row center" style="margin: 10px;">
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 un">1</p>
+    </div>
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<h4><b>Principe </b></h4>
+
+<p>La méthode de TRi a bulles consiste a répeter le traietement suivant:
+  Parcourir les élements du tableau de 1 a (n-1): si l'élement i est supérieure a l'element (i+1),
+  alors on permute. </p>
+
+  <p>Alors le programme s'arréte lorsque aucunne permutation n'est réalisable aprés un parcours complet du tableau </p>
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+
+<!-------------------------------------------------------->
+
+
+                <li>
+                <div class="row center" style="margin: 10px;">
+
+
+    <div class="col s12 m1">
+      <p class="z-depth-3 cinq">5</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 trois">3</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 quatre">4</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 sept">7</p>
+    </div>
+    <div class="col s12 m1">
+      <p class="z-depth-3 deux">2</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 huit">8</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 six">6</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 neuf">9</p>
+    </div>
+     <div class="col s12 m1">
+      <p class="z-depth-3 un">1</p>
+    </div>
+</div><!----end of row---->
+
+
+
+<div class="card-content white-text text-darken-2 center">
+
+<p>Contenu aprés </p>
+
+</div><!---end of card content------->
+
+
+
+                </li>
+
+
+
+
+            </ul>
+
+</div><!---end of class slider---->
+</div><!----end of div----->
+
+
+
+
+
+
+
+
+
+      </div><!----end of calss row----->
+
+
+
+
+
+<!------------------------------------------------------------>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------------------------------------------------------------------------->
+
+
+
+
+
+
+
+</div><!--end of container---->
+
+
+        </div><!----end of div id shell----->
+
+
+
+
+
+
+<script type="text/javascript" src="script.js" > </script>
+
+
+
+
+
+   </body>
+</html>
