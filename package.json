@@ -13,5 +13,25 @@
     "jade": "~1.11.0",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0"
-  }
+  },
+  "description": "web page to explain the famous orting algorithmics",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rebaiahmed/Algorithmes_TRi.git"
+  },
+  "keywords": [
+    "nodejs",
+    "algorithmic",
+    "sorting",
+    "jquery",
+    "materializecss"
+  ],
+  "author": "Rebai Ahmed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rebaiahmed/Algorithmes_TRi/issues"
+  },
+  "homepage": "https://github.com/Rebaiahmed/Algorithmes_TRi#readme"
 }
