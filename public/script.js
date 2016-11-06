@@ -106,6 +106,12 @@ $('.slide4').click(function() {
 });
 
 
+//animation pour la classe minimum
+$('.minimum').click(function() {
+//$(this).animate({"color":"#efbe5c","font-size":"48pt"}, 1000);
+    $(this).animate({"color":"#efbe5c","font-size":"20pt"}, 1000);
+});
+
 
 
 

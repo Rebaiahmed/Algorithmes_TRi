@@ -108,3 +108,25 @@ background-color: #039be5 ;
   margin: 0px;
   background-color: #ffffff;
 }
+
+
+
+
+
+@keyframes example {
+    from {background-color: red;}
+    to {background-color: #33691e;}
+}
+
+
+
+
+
+
+
+.minimum{
+	
+ animation-name: example;
+    animation-duration: 7s;
+    font-size: 80px;
+}
